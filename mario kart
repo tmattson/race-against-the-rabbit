@@ -1,0 +1,46 @@
+<script>
+
+var Racer = function(n, w, s) {
+  this.name = n;
+  this.weight = w;
+  this.speed = s;
+  this.position = 0;
+  this.report = function() {
+    return this.name + " is at " + this.position;
+  };
+  this.run = function() {
+      if(this.speed < (Math.random() * 10)) {
+        this.position += this.weight;
+      }
+     };
+    }
+  
+var plumber = new Racer("Mario", 3, 3);
+var brother = new Racer("Luigi", 3, 3);
+var princess = new Racer("Peaches", 3, 3);
+var toadstool = new Racer("Toad", 3, 3);
+var dragon = new Racer("Bowser", 3, 3);
+
+var distance = 575
+  
+  while (plumber.position < distance && brother.position < distance && princess.position < distance
+        && toadstool.position < distance && dragon.position < distance) {
+ 
+  plumber.run(); 
+  brother.run();
+  princess.run();
+  toadstool.run();
+  dragon.run();
+  };
+
+  console.log(plumber.report());
+  console.log(brother.report());
+  console.log(princess.report());
+  console.log(toadstool.report());
+  console.log(dragon.report());
+
+</script>
+
+
+
+
